@@ -13,9 +13,9 @@ fetchPromise
   return response.json();
 })
 .then((weather => {
-  const weather = climate.map(weather) => {
+  var climate = climate.map((weather) => {
     return climate.weather;
-  }
+  })
   console.log(weather);
 }))
  
