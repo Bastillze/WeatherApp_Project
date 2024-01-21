@@ -9,17 +9,21 @@ const fetchPromise = fetch(
 const main = document.getElementById("main");
 
 //Function that processess the JSON information from weather API website//
+
+let weather = "regionWeather";
+
 fetchPromise
 
   .then((response) => {
     return response.json();
   })
   .then((weather) => {
-    const location = function (regionWeather) {
+    const location = function weather(regionWeather) {
       location.weather.join("\n");
     };
     console.log(weather);
   });
+
 //Append weather info into main DIV element//
 
-main.innerHTML.HTML = location;
+main.innerHTML = weather;
