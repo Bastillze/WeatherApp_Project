@@ -1,13 +1,40 @@
-//Function to call location's weather info from API website//
-function fetchData() {
-  return fetch(
-    "http://api.weatherapi.com/v1/current.json?key=3c836a38db6d4e46b7950259231912&q=London&aqi=no"
-  )
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .then((data) => {
-      document.getElementById("main").textContent = JSON.stringify;
-    });
+// WeatherApp
+
+
+const weatherForm = document.querySelector(".weatherForm");
+const cityInput = document.querySelector(".cityInput");
+const card = document.querySelector(".card");
+const apiKey = "3c836a38db6d4e46b7950259231912";
+
+
+weatherForm.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    const city = cityInput.value;
+
+    if(city){
+
+    }
+    else{
+      
+    }
+
+
+});
+
+async function getWeatherData(city){
+
 }
 
-fetchData();
+function displayWeatherInfo(data){
+
+}
+
+function getWeatherEmoji(weatherId){
+
+}
+
+function displayError(message){
+
+}
