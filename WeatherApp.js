@@ -39,9 +39,32 @@ async function getWeatherData(city){
 
     console.log(response);
 
+    if(!response.ok){
+        throw new Error("Could not fetch weather data");
+    }
+
+    return await response.json();
+
 }
 
 function displayWeatherInfo(data){
+
+       const {name: city, 
+              main: {temp, humidity}, 
+              weather: [{description, id}]} = data;
+
+        card.textContent = "";
+        card.style.display = "flex";  
+        
+        const cityDisplay = document.createElement("h1");
+        const tempDisplay = document.createElement("p");
+        const humidityDisplay = document.createElement("p");
+        const descDisplay = document.createElement("p");
+        const weatherDisplay = document.createElement("p");
+
+        cityDisplay.textContent = city;
+
+        card.appendChild(cityDisplay);
 
 }
 
