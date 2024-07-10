@@ -63,6 +63,11 @@ function displayWeatherInfo(data){
         const weatherDisplay = document.createElement("p");
 
         cityDisplay.textContent = city;
+        tempDisplay.textContent = `${(temp - 273.15).toFixed(1)}`;
+        descDisplaytextContent = description;
+
+        cityDisplay.classList.add("cityDisplay");
+        tempDisplay.classList.add("tempDisplay");
 
         card.appendChild(cityDisplay);
 
